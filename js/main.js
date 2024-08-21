@@ -1,3 +1,4 @@
+import { capitalize } from "./capitalize.js";
 // CRUD - (Create Read Update Delete)
 
 // 1. susirandi DOMinanti elementa
@@ -27,3 +28,21 @@ const h2DOM = document.getElementsByTagName('h2');
 console.log(h2DOM[1]);
 
 console.log(document.getElementsByClassName('red'));
+
+console.clear();
+
+
+const hTwoDOM = document.getElementsByClassName('hTwo');
+
+const text1 = hTwoDOM[0].textContent;
+const text2 = hTwoDOM[0].innerText;
+console.log(text1);
+console.log(text2);
+
+
+for (const hDOM of hTwoDOM) {
+    hDOM.textContent = capitalize(hDOM.textContent);
+} 
+
+
+
