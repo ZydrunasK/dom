@@ -1,0 +1,69 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #ccc;
+}
+
+.form > .form-title {
+    font-weight: bold;
+}
+.form > .form-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.form .form-element {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.form label {
+    color: #777;
+}
+.form input {
+    width: 6rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.form button {
+    width: 6rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.form .note {
+    color: #999;
+    font-style: italic;
+}
+.world {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: beige;
+    height: calc(100vh - 400px);
+    width: 100%;
+}
+.world > .row {
+    display: flex;
+}
+.world > .row > .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ccc;
+}
+.world .snake, 
+.world .chicken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    object-fit: contain;
+    object-position: center;
+}
