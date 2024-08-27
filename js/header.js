@@ -17,7 +17,7 @@ export function header(currentHref) {
             text: 'Komanda',
         },
         {
-            href: 'basketball',
+            href: 'scoreboard',
             text: 'Krepšinis',
         },
         {
