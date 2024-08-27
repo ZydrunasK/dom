@@ -10,32 +10,55 @@
 </head>
 <body>
     
-    <main>
-        <section class="home">
-            <div class="count">
-                <p class="title">Home</p>
-                <div class="score">0</div>
-            </div>
-            <div class="btn">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-            </div>
+    <main class="mainScoreBoard">
+        <section class="board">
+            <section class="home">
+                <div class="count">
+                    <p class="title">Home</p>
+                    <div class="score">0</div>
+                </div>
+                <div class="btn">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </div>
+            </section>
+            <section class="divide">
+                <p class="thePeriod">P1</p>
+            </section>
+            <section class="guest">
+                <div class="count">
+                    <p class="title">Guest</p>
+                    <div class="score">0</div>
+                </div>
+                <div class="btn">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </div>
+            </section>
         </section>
-        <section class="divide">
-            <p>:</p>
-        </section>
-        <section class="guest">
-            <div class="count">
-                <p class="title">Guest</p>
-                <div class="score">0</div>
+    </section>
+
+    <section class="keeper">
+        <button class="periodBtn">End period</button>
+        <div class="periods">
+            <div class="perHome">
+                <h2>home</h2>
+                <p class="p1">0</p>
+                <p class="p2">0</p>
+                <p class="p3">0</p>
+                <p class="p4">0</p>
             </div>
-            <div class="btn">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-            </div>
-        </section>
+            <div class="perGuest">
+                <h2>guest</h2>
+                <p class="p1">0</p>
+                <p class="p2">0</p>
+                <p class="p3">0</p>
+                <p class="p4">0</p>
+            </div>    
+        </div>
+        
     </main>
 
     <script type="module" src="../js/scoreboard.js"></script>
