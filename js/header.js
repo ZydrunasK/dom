@@ -1,39 +1,65 @@
+export function header(currentHref) {
+    const navData = [
+        {
+            href: '',
+            text: 'Pagrindinis',
+        },
+        {
+            href: 'services',
+            text: 'Paslaugos',
+        },
+        {
+            href: 'team',
+            text: 'Komanda',
+        },
+        {
+            href: 'basketball',
+            text: 'Krepšinis',
+        },
+    ];
 
-let headerDOM = document.getElementsByTagName('header')
+    let navHTML = '';
 
-const headerArray = [
-    {
-        link: '../',
-        title: 'Home',
-    },
-    {
-        link: '../services',
-        title: 'services',
-    },
-    {
-        link: '../about',
-        title: 'about',
-    },
-    {
-        link: '../contact',
-        title: 'Contact us',
-    },
-];
-// <a href= ""
-function headerMaker(arr) {
+    for (const link of navData) {
+        let classes = '';
 
-    let links = '';
-    for (let i = 0; i < arr.length; i++) {
-        links += `<a href= "${arr[i].link}">${arr[i].title}</a> \n`; 
+        if (currentHref === link.href) {
+            classes = 'link active';
+        } else {
+            classes = 'link';
+        }
+
+        navHTML += `<a class="${classes}" href="../${link.href}">${link.text}</a>`;
     }
-    const head = `
-        <img src="#" alt="logo" />
-        <nav>
-            ${links}
-        </nav>
-    `;
-    return head;
+
+    const headerHTML = `
+        <header class="header">
+            <img class="logo" src="../logo.webp" alt="logo">
+            <nav class="nav">${navHTML}</nav>
+        </header>`;
+
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
-headerDOM[0].innerHTML = headerMaker(headerArray);
+export function header2(currentHref) {
+    const data = [
+        { href: '', text: 'Pagrindinis' },
+        { href: 'services', text: 'Paslaugos' },
+        { href: 'team', text: 'Komanda' },
+    ];
 
+    const linkHTML = [];
+
+    for (const { href, text } of data) {
+        linkHTML.push(
+            `<a class="link ${currentHref === href ? 'active' : ''}" href="../${href}">${text}</a>`
+        );
+    }
+
+    const HTML = `<header class="header">
+            <img class="logo" src="../logo.png" alt="logo">
+            <nav class="nav">${linkHTML.join('')}</nav>
+        </header>`;
+
+    document.body.insertAdjacentHTML('afterbegin', HTML);
+}
