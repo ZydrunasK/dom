@@ -3,7 +3,7 @@
 Website project to learn how to use DOM
 
 
-You can see it <a href="https://zydrunask.github.io/workshop-dom/">here</a>
+You can see it <a href="https://zydrunask.github.io/dom/">here</a>
 
 
 ## About
